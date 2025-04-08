@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import os
@@ -29,16 +28,27 @@ def menu():
     print("7. Super Busca via IA (@username)")
     print("8. Sair")
     escolha = input("\n>>> Escolha: ")
-    match escolha:
-        case '1': buscar_username()
-        case '2': verificar_email()
-        case '3': buscar_telefone()
-        case '4': rastrear_crypto()
-        case '5': buscar_telegram()
-        case '6': buscar_darkweb()
-        case '7': super_ia()
-        case '8': sair()
-        case _: print("Opção inválida."); time.sleep(1); main()
+
+    if escolha == '1':
+        buscar_username()
+    elif escolha == '2':
+        verificar_email()
+    elif escolha == '3':
+        buscar_telefone()
+    elif escolha == '4':
+        rastrear_crypto()
+    elif escolha == '5':
+        buscar_telegram()
+    elif escolha == '6':
+        buscar_darkweb()
+    elif escolha == '7':
+        super_ia()
+    elif escolha == '8':
+        sair()
+    else:
+        print("Opção inválida.")
+        time.sleep(1)
+        main()
 
 def buscar_username():
     usuario = input("Digite o nome de usuário: @")
@@ -95,8 +105,7 @@ def buscar_darkweb():
 
 def super_ia():
     user = input("Digite o @username: @")
-    print(f"Rastreando tudo sobre @{user} com ajuda da IA...
-")
+    print(f"Rastreando tudo sobre @{user} com ajuda da IA...")
     time.sleep(1)
     print(f"[+] Nome: Lucas S.")
     print(f"[+] Instagram: https://instagram.com/{user}")
